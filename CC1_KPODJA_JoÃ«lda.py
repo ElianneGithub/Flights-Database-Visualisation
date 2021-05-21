@@ -70,7 +70,7 @@ aeroports_par_ville = aeroports_par_ville[0:15]
 print(aeroports_par_ville)
 
 
-### Question 2
+### Exercice 2
 
 """ Partie 1 : Construisons et affichons le nombre de compagnies (airlines) par pays """
 
@@ -80,7 +80,7 @@ airlines_par_pays = airlines[['id','country']].groupby('country').count()
 print(airlines_par_pays)
 
 
-""" Partie 2 : Traconss sur la carte des points proportionnels au nombre de compagnies par pays """
+""" Partie 2 : Tracons sur la carte des points proportionnels au nombre de compagnies par pays """
 
 par_pays =  airports[['country', 'longitude', 'latitude']].groupby('country').agg({'longitude':'mean','latitude':'mean'})
 
@@ -95,7 +95,7 @@ plt.show()
 
 
  
-### Question 3 :
+### Exercie 3 :
 
 # Fonction de l'itineraire 
 
