@@ -60,7 +60,7 @@ def affiche_aeroports(aeroports,image):
     plt.scatter(X,Y,1)
 
 
-### Question 1 :
+### Exercie 1 :
 
 aeroports_par_ville = airports[['code','city']].groupby('city').count().sort_values('code',ascending=False)
 
