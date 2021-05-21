@@ -60,7 +60,7 @@ def affiche_aeroports(aeroports,image):
     plt.scatter(X,Y,1)
 
 
-### Exercie 1 :
+### Exercie 1 : Listons les 15 villes ayant le plus d’aéroports dans la base
 
 aeroports_par_ville = airports[['code','city']].groupby('city').count().sort_values('code',ascending=False)
 
@@ -72,7 +72,7 @@ print(aeroports_par_ville)
 
 ### Question 2
 
-""" Partie 1 : Construisez et affichez le nombre de compagnies (airlines) par pays """
+""" Partie 1 : Construisons et affichons le nombre de compagnies (airlines) par pays """
 
 
 airlines_par_pays = airlines[['id','country']].groupby('country').count()
@@ -80,7 +80,7 @@ airlines_par_pays = airlines[['id','country']].groupby('country').count()
 print(airlines_par_pays)
 
 
-""" Partie 2 : Tracez sur la carte des points proportionnels au nombre de compagnies par pays """
+""" Partie 2 : Traconss sur la carte des points proportionnels au nombre de compagnies par pays """
 
 par_pays =  airports[['country', 'longitude', 'latitude']].groupby('country').agg({'longitude':'mean','latitude':'mean'})
 
